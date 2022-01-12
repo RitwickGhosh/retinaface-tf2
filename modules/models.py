@@ -3,7 +3,7 @@ from tensorflow.keras import Model
 from tensorflow.keras.applications import MobileNetV2, ResNet50
 from tensorflow.keras.layers import Input, Conv2D, ReLU, LeakyReLU
 from modules.anchor import decode_tf, prior_box_tf
-
+import tensorflow_model_optimization as tfmot
 
 def _regularizer(weights_decay):
     """l2 regularizer"""
@@ -33,7 +33,7 @@ class BatchNormalization(tf.keras.layers.BatchNormalization):
         return super().call(x, training)
 
 
-def Backbone(backbone_type='ResNet50', use_pretrain=True):
+def Backbone(backbone_type='MobileNetV2', use_pretrain=True, compression='QAT'):
     """Backbone Model"""
     weights = None
     if use_pretrain:
@@ -57,7 +57,8 @@ def Backbone(backbone_type='ResNet50', use_pretrain=True):
         else:
             raise NotImplementedError(
                 'Backbone type {} is not recognized.'.format(backbone_type))
-
+        if compression == 'QAT':
+            extractor = tfmot.quantization.keras.quantize_model(extractor)
         return Model(extractor.input,
                      (extractor.layers[pick_layer1].output,
                       extractor.layers[pick_layer2].output,
