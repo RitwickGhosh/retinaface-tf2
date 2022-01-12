@@ -1,3 +1,24 @@
+
+## Extra Notes (@RitwickGhosh):
+
+- https://colab.research.google.com/drive/1r_V7J7oSSYRDbX1pbOQAq1hyG2in3rKD?usp=sharing
+    - Google Colab (Auxiliary Tests)
+- https://www.tensorflow.org/model_optimization/api_docs/python/tfmot/quantization/keras/quantize_model
+    - Keras Model Optimization Options
+
+## Now Compression Implimented (@RitwickGhosh):
+
+- https://www.tensorflow.org/model_optimization/guide/quantization/training_comprehensive_guide
+    - QAT: Quantize Aware Training
+
+
+## More Compression can be Implimented (@RitwickGhosh):
+
+    - Cluster preserving QAT
+    - Sparcity and Cluster preserving QAT
+    - Pruning preserving QAT
+
+
 # [retinaface-tf2](https://github.com/peteryuX/retinaface-tf2)
 
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/peteryuX/retinaface-tf2.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/peteryuX/retinaface-tf2/context:python)
@@ -259,3 +280,4 @@ Thanks for these source codes porviding me with knowledges to complete this repo
     - Python Evaluation Code for Wider Face Dataset
 - https://github.com/zzh8829/yolov3-tf2
     - YoloV3 Implemented in TensorFlow 2.0
+
