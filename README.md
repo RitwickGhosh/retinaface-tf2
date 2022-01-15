@@ -1,3 +1,5 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1lb1VUJp4b8MT0rIc01byWgel8bH1kck5?usp=sharing)
+
 
 ## Extra Notes (@RitwickGhosh):
 
