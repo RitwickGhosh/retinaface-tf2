@@ -6,3 +6,4 @@ tqdm
 Pillow
 Cython
 ipython
+trnsorflow-model-optimization
